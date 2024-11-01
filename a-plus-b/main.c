@@ -1,9 +1,9 @@
 #define _CRT_SECURE_NO_WARNINGS
 
+#include "a_plus_b.h"
+
 #include <stdio.h>
 #include <stdlib.h>
-
-int a_plus_b(int a, int b);
 
 int main(void) {
   int a;
@@ -13,4 +13,3 @@ int main(void) {
   return EXIT_SUCCESS;
 }
 
-int a_plus_b(int a, int b) { return a + b; }
