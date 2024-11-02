@@ -12,4 +12,3 @@ int main(void) {
   printf("%d", a_plus_b(a, b));
   return EXIT_SUCCESS;
 }
-
