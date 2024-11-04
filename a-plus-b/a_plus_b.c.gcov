@@ -1,0 +1,7 @@
+        -:    0:Source:a_plus_b.c
+        -:    0:Graph:test-a_plus_b.gcno
+        -:    0:Data:test-a_plus_b.gcda
+        -:    0:Runs:2
+        -:    1:#include "a_plus_b.h"
+        -:    2:
+        4:    3:int a_plus_b(int a, int b) { return a + b; }
