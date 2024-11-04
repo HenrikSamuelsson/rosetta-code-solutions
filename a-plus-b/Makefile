@@ -7,14 +7,17 @@ $(info $(SHELL))
 TESTFLAGS=-fprofile-arcs -ftest-coverage
 
 main: main.c a_plus_b.h a_plus_b.c
-	# build the test
 	gcc -o main.exe main.c a_plus_b.c
 
+test: test.c a_plus_b.h a_plus_b.c
+	# build the test
+	$(CC) $(CFLAGS) $(TESTFLAGS) -o test test.c a_plus_b.c
+
 	# run the test, which will generate test-counter.gcna and test-counter.gcno
-	./main
+	./test
 
 	# compute how test is covering counter.c
-	# gcov -c -p test-counter
+	gcov -c -p test-a_plus_b
 
 clean:
 	rm -f *.o test *.gcov *.gcda *.gcno
