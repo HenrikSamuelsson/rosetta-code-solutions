@@ -7,7 +7,8 @@ $(info $(SHELL))
 TESTFLAGS=-fprofile-arcs -ftest-coverage
 
 main: main.c a_plus_b.h a_plus_b.c
-	gcc -o main.exe main.c a_plus_b.c
+	# build main
+	$(CC) $(CFLAGS) -o main main.c a_plus_b.c
 
 test: test.c a_plus_b.h a_plus_b.c
 	# build the test
