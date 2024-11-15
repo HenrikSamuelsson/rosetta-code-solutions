@@ -20,8 +20,15 @@ int main(void) {
   int a;
   int b;
   scanf("%d%d", &a, &b);
+  printf("%d\t", a);
+  printf(BYTE_TO_BINARY_PATTERN, BYTE_TO_BINARY(a));
+  printf("\n");
+  printf("%d\t", b);
+  printf(BYTE_TO_BINARY_PATTERN, BYTE_TO_BINARY(b));
+  printf("\n");
   int a_and_b = bitwise_and(a, b);
-  printf("%d ", a_and_b);
+  printf("%d\t", a_and_b);
   printf(BYTE_TO_BINARY_PATTERN, BYTE_TO_BINARY(a_and_b));
+  printf("\n");
   return EXIT_SUCCESS;
 }
