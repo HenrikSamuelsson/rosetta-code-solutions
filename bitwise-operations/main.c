@@ -22,13 +22,17 @@ int main(void) {
   scanf("%d%d", &a, &b);
   printf("%d\t", a);
   printf(BYTE_TO_BINARY_PATTERN, BYTE_TO_BINARY(a));
-  printf("\n");
+  printf("\ta\n");
   printf("%d\t", b);
   printf(BYTE_TO_BINARY_PATTERN, BYTE_TO_BINARY(b));
-  printf("\n");
+  printf("\tb\n");
   int a_and_b = bitwise_and(a, b);
   printf("%d\t", a_and_b);
   printf(BYTE_TO_BINARY_PATTERN, BYTE_TO_BINARY(a_and_b));
-  printf("\n");
+  printf("\ta AND b\n");
+  int a_or_b = bitwise_or(a, b);
+  printf("%d\t", a_or_b);
+  printf(BYTE_TO_BINARY_PATTERN, BYTE_TO_BINARY(a_or_b));
+  printf("\ta OR b\n");
   return EXIT_SUCCESS;
 }
