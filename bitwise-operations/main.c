@@ -17,10 +17,12 @@ struct operands {
   int b;
 };
 
+typedef struct operands Operands;
+
 static void display_result(char * operation_name, int result);
 
 int main(void) {
-  struct operands ops; 
+  Operands ops; 
   scanf("%d%d", &ops.a, &ops.b);
   display_result("a", ops.a);
   display_result("b", ops.b);
@@ -33,7 +35,7 @@ int main(void) {
 
 static void display_result(char * operation_name, int result) {
   printf("%s\t", operation_name);
-  printf("%d\t", result);
   printf(BYTE_TO_BINARY_PATTERN, BYTE_TO_BINARY(result));
+  printf(" (%d)", result);
   printf("\n");
 }
