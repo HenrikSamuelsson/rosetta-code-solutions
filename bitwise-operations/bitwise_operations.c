@@ -37,3 +37,9 @@ int bitwise_or(int a, int b) {
   result = a | b;
   return result;
 }
+
+int bitwise_xor(int a, int b) {
+  int result;
+  result = a ^ b;
+  return result;
+}

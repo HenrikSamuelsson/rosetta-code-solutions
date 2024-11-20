@@ -24,6 +24,8 @@ int main(void) {
   display_result("a AND b", a_and_b);
   int a_or_b = bitwise_or(ops.a, ops.b);
   display_result("a OR B", a_or_b);
+  int a_xor_b = bitwise_xor(ops.a, ops.b);
+  display_result("a XOR B", a_xor_b);
   return EXIT_SUCCESS;
 }
 
